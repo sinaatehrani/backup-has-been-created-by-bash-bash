@@ -1,0 +1,344 @@
+kind of Desktop : genom- cinnom - kde
+.deb debian package  and .rpm redhat package - .exe microsoft
+
+
+how to change timezone=timezonectl
+how to change hostname: /etc/hostname or hostenamectl
+uname -a = you have to what distrubute
+file yek file = behet mige noe yek file chist
+what difrent between enable and disable with stop and start (enable and disable boottime/)
+bin = binary file <for all command>
+ssh(for link to server) and sshd(for link to client)
+read= fetch data from someone read -p "what your name" myname
+man for all command and configfile(hamishe man man o begir)
+man -S passwd (halat command file begu chiye)
+man -a passwd (halat inke bege chand mode baresi dare)
+man -k passwd
+cat -n filename > it is pastpace = nl filename
+wc -l -n -c
+sudo vi /etc/resolv.conf
+date > filename
+date >> filename (append mikone)
+cat filename | wc -l
+سشن ۴
+stdin- stdout-stderr
+tail -f syslog *follow real time*
+sed "s/ali/ahmad/g" where file?
+sed -i "s/ali/ahmad/g" where file?
+sed "25,30s/ali/ahmad/g" where file?
+state file 
+Atime?che zamani cat shode 
+Mtime?che zamani edit shode
+Ctime? che zamani attri avaz shode
+ansible is configur manager like change one config on n Server
+date;cal
+find where -name file.text -maxdeph 2 -type f or d mtime.ctime.atime
+find -size +10M -o(یا) -user root -a(و) ! -user ali
+find /etc "*.conf"-type f -size -10k 10mg -user sina -o -group apache -exec cp {} /tem \;
+find /etc "*.conf"-type f -size -10k 10mg -user sina -o -group apache -exec rm -rf {} /tem \;
+gzip gunzip just for file
+bzip2 bunzip2  just for file
+gzip -r on directory tamame file hasho baham zip mikone
+xz -kv filenaem
+tar file archive = tar -Jcvf sina.tar file1 file2 file3  
+search for word:grep -i sina /etc/file toye chand ja sina has
+tar -tf file (show file compreesed)
+grep -i -v sina /etc/file toye chand ja sina nis
+grep -i "^$" filename
+vimdiff fileone filetwo for comparing to file
+xz unxz
+cat /etc/group 
+how to change change file to unix to dos to mac?dos2ounix
+apt purgae software it means remove compeletly
+apt remove software it means remove
+cat /etc/passwdw
+passwd = change password
+session 4
+cat /etc/group list of group
+groupadd -g ID(دلخواه) namegroup
+groupdel -g ID(دلخواه) namegroup
+groupmod -g ID(دلخواه) namegroup
+groupmod -n exname newgroupname groupname
+cat /etc/passwd list of users
+ubunto:X(آیا پسورد دارد):userid:group id :comment:homekojas:bashesh chiye
+user root = user id v group id =0
+tafavot nologin ba fals= joftesh nemitune login kone
+useradd -m(home besaz) -g(group id) 1000(age ino nanevisim khodesh ba esme user group misaze) -c "sinadev" -s(barash bash besaz) /bin/bash nanaz(user name)
+usermod -g 1000 -c "sinadev" -s /bin/bash nanaz (user name)
+usermod -G(secondery gruop ba -G bozorg) 4000 -c "sinadev1" nanaz (user name) 
+usermod -Ga(secondery gruop ba -G bozorg) 4000 -c "sinadev1" newuser (user name) 
+har user yek primary va shayad chand secondry group dard hal baraye moshahede on id nameuser an ra neshan midahad
+ etc/apt/source.listfile= how to show default repositor
+etc/apt/source.list.d new repositry=how to add repositor
+-G = Secndery gruop
+-n = append ham mikone
+usermod -Gn 4000 -c "sinadev1" nanaz
+id user = id nanaz = yek user dar che group haye ozve hast
+deluser sudo arash .arash az grup sudo kharej mishe
+chmod ugo+rw file1
+chown -R تغیر یوزر و گروه
+chgrp تغییر گروه
+special permissoin just on exute run
+suid - sgid - sticky bit
+suid = just excut with user
+sgid = just excute with member of gruop
+stiky bit= just active on directory and file in this directory only edit and delet and excute with owner
+umask = creat defualt permisson
+chage = is lifetime password for user
+LINK=1-soft line (shotcut windows) and HARD LINK 
+hard link just for file.just on per partion is same inode
+hard link and directory for file.just on per partion and is not same inode
+find koja -inum shomare inode or samefile esme file
+ls -li ---> inode chande
+ln -s softlink
+ln  hardlink
+ps -ef = htop 
+first PID = 1 = sbin/init
+ID USER ROOT = 0
+yes > bigfile 
+bzip2 bigfile
+kill prosess id 
+kill PID
+killall 
+kill -l howmany signal for kill process = 64
+SIGHUB 1 close all session 
+SIGkill 2 (CTRL C)
+SIGinit 9 so hard 
+SIGterm 15 (KILL)
+bzip2 namefile &
+joba
+bg   %PID
+nohub command = even if you close the terminal dosent kill command
+cat nohub.out
+parrent processs nohub = 1
+cat /proc/ = files are related to process = config hardwre
+watch command= monitoring command
+INIT----> runlevel
+session 6
+apt install net-tools(package network)
+set IP add
+ifconfig -a = ip 
+temproray
+ifconfig eth0/100 up or down 
+ifconfig eth0/100 IP netmask getway up/down
+can change brodcast ip
+set brdocast 
+ifconfig eth0/100 broadcast IP 
+set MAC address
+ifconfig eth0-100 hw ether macjadid
+promisc (captche full IP)
+ifconfig eth0-100 promisc (enable) and (disable) ifconfig eth0-100 -promisc
+software for captcharing on linux= TCP DUMP and Tshark
+set alias ip
+ifconfig ens/0-100:0-9 10.10.10.0 netmask 255.255.255 up/down 
+ifconfig ens/0-100:0-9 down
+set ip with command ip
+ip a = ifconfig
+ip link set ens/0-100 down
+ip address add IP/24 dev up/down
+ip address add broadcast IP dev ens/0-100
+ip address del IP/24 dev up/down
+
+managing routing table
+0.0.0.0 default rout yani hamechi
+route -n = IP route show = netstat -rn
+route add -net IP netmask ens/0-100
+ip route add ip dev ens/0-100
+set default getway
+ip route add default via 192.....
+network config file for permanet in ubunto: etc/netplan/00.yaml new config after 2018
+/etc/network/interface old config is not yaml
+finally you should insert this command = netplan apply
+apt update = meta data = config file = vi /etc/apt/sources.list = it is main repository only for ubunto repository
+https://ir. bezar
+cd /etc/apt/sources.list.d for another reposirity such as docker ...
+
+apt upgrade = applicati should be upgarade
+apt dist-upgrade
+do-release-upgrade = khode ubunto update mishe  masalan az v 18 be 22 
+nslookup=dig
+nestat=ss
+netstat -pentual
+dns port =53
+dhcp port=68 client 
+dhcp port server= 67 server
+nestat -rn = routing table
+apt install atop =  logrotate= cd var/log/atop = backup ta 5 ruz dare 
+baraye khondan file dakhel atop directory bayad bezani atop -r onfile k zakjire kard.
+btop another apt install
+iftop another apt install (network monitoring)=iptrf-ng an other package(packt trafic captcher)
+nmap = port maghsad aya baz ast ay kheir(port scaning)
+iotop = tarfik hardwre
+DNS:
+etc/netplan
+etc/resolv.conf = add addres dns server
+etc/host = add name addres dns server
+tafavot dns server vs dns host= be har dalili agar ma dns server dar sazman nadashtim dakhel har client etc/host esme on client ba ip minevsim faghat aval dns server host chek mishe bad resolve conf
+how to change priority for check host or densresolve file= you should go etc/nsswitch
+nslookup = faghat az dns server mipores
+systemctl mas systemd-resolved (age did jaye modiriyat network manger nemikhasti) mask dar moghable unmask
+nslookup google.com az kodum IP bepors IP google=dig google.com az kodum @IP bepors(apt install iproute2 )
+firewall:
+redhat= firewallcmd
+debian= ufw (apt istall ufw) is servis
+ufw allow ssh/ ftp/https
+ufw delet ssh/ ftp/https
+ufw allow 8080
+ufw reload
+ufw status verbos
+dry run = مانور دادن
+ip table = servis network= packet filtering
+ufw disable!= ufw enable
+ufw default deny incoming
+ufw default allow outcoming
+session 7:
+remotly conncent old = telnet - ftp and it is clear text
+ssh = telnet 
+scp = sceure cp from clinet to remotly server
+cp = to directory from on client or server
+sftp = ftp = data encrypt from source to destination 
+pakage install openssh-server
+ssh is service and listning on port 22
+servic= systemctl status sshd
+systemctl start or stop sshd
+systemctl enable  or disable sshd
+ssh username@Ip 
+ssh username@Ip -l 
+ssh username@Ip "command"
+cat /etc/apt/sources.list 
+pasvand ir beshavad
+ya server local repository besh midi
+best local repository software = nexsus 
+if you wont have local repositiry you should use from tunnling software such as moboxtram
+how to ssh to server or client?
+
+
+session 08
+echo $? status last command
+echo $0 script name
+echo $1~9
+echo $@ نام ورودی برنامه جلوی اکریپت
+echo $# تعداد آرگومان ورودی 
+echo $$ PID SCRIPT
+echo $! PID last command in SCRIPT
+echo $RANDOM
+
+
+awk = cut 
+cat /etc/passwd | awk -F ":" '{print $1,$2}'
+awk = awk -F ":" '{print $1,$2}'
+
+awk -F ":" begin main end ----> main ejbari
+cat /etc/passwd | awk -F ":" '{if (($3>1000))print "User-name: " $1 "\tUSER-ID : " $4}'
+cat /etc/passwd | awk -F ":" 'BEGIN{print "USER-name" "\tUID"}{if (($3>1000))print "User-name: " $1 "\tUSER-ID : " $4} END{print thank you}'
+mesl excel count o sum dard
+
+Mesal ping server with bash
+!#/bin/bash/
+read -p "pleas enter your IP" IP
+ping -c 4 $IP >> /dev/null
+
+if [$? -eq 0];then
+echo "Server is reachanle"
+else 
+echo "Server is not reachable"
+fi
+
+new script
+#!/bin/bash
+
+while[-z $VAR]; تا زمانی ورودی مساوی صفر است فلان کار و انجام بده
+how to run script on second
+ bendaz toye for
+ sleep میشه استفاده کرد
+ crontab har user khodesho dare
+ cron سرویس است 
+ دو نوع cron داریم 
+ 
+ arash toye grup docker= usradd -aG arash docker
+ where is cronjob users?
+ redhat var/spool/cron
+ debian var/spool/crontab
+ cat /etc/crontab/ برای همه است 
+ crontab -l
+ crontab -e = creat and edit job 
+ crontab -r = remove job
+crontab -u <user> = edit kardan job yek user dg
+crontabgenarato ---> best web site for crontab
+crontab gru
+
+
+* * * * username /root/script/.script >> /root/script.log 2>&1  چه بود چه نبود
+
+* * * * root /root/script/.script 2>> /root/error.log 
+session 09
+ebteda tamrin chan bash
+find $OUTPUT -name "savefolder*.log" -mtime +2 -exec rm {} \; (آخر هر اسکریپت بزار که بک آپ بگیره)
+
+crontab -e 
+0 0,12 * * * /home/user/.... >> beriz into 2>&1
+command w -h | wc -l 
+VAR=`w -h | wc -l`
+
+tamrin pingable budan yek seri IP
+#!/bin/bash
+
+
+FILENAME=ip-list.txt
+TODAY=`date +%Y%m%d`
+OUTPUT=/home/sina/log_&HOSTNAME_$TODAY.log
+while read LINE
+do 
+  ping -c 1 $LINE > /dev/null
+    if [$? -eq 0]
+      then
+        echo "$LINE is pingable" >> $OUTPUT
+      else 
+        echo "Server $LINE is not pingable, please check it now!" >> $OUTPUT
+      fi
+done < $FILENAME
+``= $()
+
+tee یک stdout را هم در screen  و هم در فایل نمایش بدیم
+ $[] متغییرها را میتوانیم جمع و تفریق کنیم
+----------------
+session 10
+version control system:
+2 model dare : centralize(source on server and anybody should work on this) or distrubute (push- merge)
+install built in on linux
+solution gui:github and gitlab
+3 laye config:1-local(project directory)-2-global(user and email)-3-system
+how to creat git repo:mkdir (folder)-local rep:1-git init.2-git statuse.3-git add -A(all)4-git commit -m "your message"(it s final commit).5-git log
+you can assign commit tag
+git reset(index haram reset mikone alave bar commite ghabli)
+git restor(taghirat emal nemikone mire baraye akharin taghirat ruye file)
+git revert(yek commit misaze k ma berim halat ghabli)
+git add -A (همه فایل عدد)
+Inode chi hast?(har file dar linux ye addres sector dare ruye hard )(etelat har file)
+chera inode por mishe?update nemishe rahe hal bayad zip shavad ta inode jadid bede
+git diff head 
+git diff stage
+clone on git(file has been giited such as cp)
+git clone can find which file is master.and can push and pull clone
+usermod -Ga 4000 -c "sinadev1" newuser
+git clone:
+such as cp (اما در cp ما جدا میشیم)
+git push : ejaze in karo nadarim ruye master 
+git pull niaz be permission nadare
+لطفا مقادیر لب تاپ وارد شود
+
+
+----------------
+git branch:
+git branch -a = list all o your branches
+git branch [name]= creating a new branch at the current commit
+git checkout [brance name]=Switch to another branch
+git checkout -b [name] =ccreat a new branch and switch to it at the momemnt
+git merge [branch]=Unstage a file while retaining the changes in working directory
+git merge [branch] --no-ff = 
+git log
+
+
+
+
+
